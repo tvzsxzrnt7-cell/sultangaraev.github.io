@@ -4,133 +4,369 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — Time & Money</title>
+
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --body: #333336;
+      --muted: #6e6e73;
+      --border: rgba(0, 0, 0, 0.08);
+      --accent: #0f766e;
+      --accent-soft: rgba(15, 118, 110, 0.10);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(15, 118, 110, 0.08), transparent 32%),
+        var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      width: min(100%, 940px);
+      margin: 0 auto;
+      padding: 42px 24px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--accent);
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(15, 118, 110, 0.14);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .back-link:hover {
+      background: #ffffff;
+      text-decoration: none;
+    }
+
+    .legal-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    main {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      padding: 50px;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      color: var(--text);
+      font-size: clamp(36px, 6vw, 56px);
+      line-height: 1.02;
+      letter-spacing: -0.055em;
+      font-weight: 850;
+    }
+
+    .summary {
+      max-width: 720px;
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.52;
+    }
+
+    .effective-date {
+      display: inline-flex;
+      align-items: center;
+      margin: 0 0 28px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: #f2f2f4;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    h2 {
+      margin: 40px 0 12px;
+      color: var(--text);
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      font-weight: 800;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--body);
+      font-size: 17px;
+      line-height: 1.62;
+    }
+
+    ul {
+      margin: 0 0 18px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin: 8px 0;
+      color: var(--body);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    strong {
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .divider {
+      height: 1px;
+      margin: 38px 0 0;
+      background: var(--border);
+    }
+
+    footer {
+      margin-top: 24px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        padding: 22px 14px;
+      }
+
+      .topbar {
+        margin-bottom: 14px;
+      }
+
+      main {
+        border-radius: 24px;
+        padding: 30px 22px;
+      }
+
+      .summary {
+        font-size: 17px;
+      }
+
+      h2 {
+        margin-top: 34px;
+        font-size: 21px;
+      }
+
+      p,
+      li {
+        font-size: 16px;
+      }
+
+      .back-link {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <p><a href="../">← Time & Money</a></p>
+  <div class="page">
+    <header class="topbar">
+      <a class="back-link" href="./">← Time & Money</a>
+      <span class="legal-badge">Legal</span>
+    </header>
 
-  <h1>Privacy Policy</h1>
+    <main>
+      <p class="eyebrow">Time & Money</p>
+      <h1>Privacy Policy</h1>
 
-  <p><strong>Effective date:</strong> May 20, 2026</p>
+      <p class="summary">
+        This Privacy Policy explains how Time & Money handles information when you use the app.
+        Time & Money is designed to keep your personal app data on your device unless you choose
+        to share, export, back up, or send it yourself.
+      </p>
 
-  <p>
-    This Privacy Policy explains how Time & Money handles information when you use the app.
-    Time & Money is designed to keep your personal app data on your device unless you choose
-    to share, export, back up, or send it yourself.
-  </p>
+      <p class="effective-date">Effective date: May 20, 2026</p>
 
-  <h2>Information stored in the app</h2>
+      <h2>Information stored in the app</h2>
+      <p>
+        Time & Money may store information you enter into the app, including shifts, tasks, habits,
+        accounts, transactions, categories, planned payments, debts, subscriptions, notes, attachments,
+        receipts, backup files, and app settings.
+      </p>
 
-  <p>
-    Time & Money may store information you enter into the app, including shifts, tasks, habits,
-    accounts, transactions, categories, planned payments, debts, subscriptions, notes, attachments,
-    receipts, backup files, and app settings.
-  </p>
+      <h2>Local storage</h2>
+      <p>
+        Your app data is stored locally on your device. The developer does not operate a server that
+        receives or stores your in-app financial, schedule, habit, task, receipt, attachment, or backup data.
+      </p>
 
-  <h2>Local storage</h2>
+      <h2>Backups and exports</h2>
+      <p>
+        If you create, share, restore, or export a backup or report, that file may contain personal data
+        from the app. You are responsible for choosing where to save or share those files. Only share
+        backups and exports with people, services, or devices you trust.
+      </p>
 
-  <p>
-    Your app data is stored locally on your device. The developer does not operate a server that
-    receives or stores your in-app financial, schedule, habit, task, receipt, attachment, or backup data.
-  </p>
+      <h2>Permissions</h2>
+      <p>
+        Time & Money may request access to certain device features only when they are needed for app
+        functionality:
+      </p>
 
-  <h2>Backups and exports</h2>
+      <ul>
+        <li><strong>Camera:</strong> used to scan or attach receipt images and, where available, add optional photos.</li>
+        <li><strong>Photo Library:</strong> used to select images or receipts that you choose to attach.</li>
+        <li><strong>Location:</strong> used only if you choose to attach a location to a transaction.</li>
+        <li><strong>Face ID:</strong> used only if you enable app lock or security features.</li>
+        <li><strong>Tracking permission:</strong> used to ask whether advertising identifiers may be used for advertising purposes.</li>
+      </ul>
 
-  <p>
-    If you create, share, restore, or export a backup or report, that file may contain personal data
-    from the app. You are responsible for choosing where to save or share those files. Only share
-    backups and exports with people, services, or devices you trust.
-  </p>
+      <h2>Advertising</h2>
+      <p>
+        Time & Money uses Yandex Mobile Ads to display advertisements in the app. Advertising partners
+        may process certain technical identifiers and advertising-related information to provide ads,
+        measure advertising performance, and help prevent fraud or abuse.
+      </p>
 
-  <h2>Permissions</h2>
+      <p>
+        On iOS, the app may ask for permission to track activity across apps and websites owned by other
+        companies using Apple’s AppTrackingTransparency framework. If you allow tracking, an advertising
+        identifier such as the device advertising ID may be used to help show more relevant ads. If you
+        choose not to allow tracking, the app will still work and may still show ads, but those ads may be
+        less personalized.
+      </p>
 
-  <p>
-    Time & Money may request access to certain device features only when they are needed for app
-    functionality:
-  </p>
+      <p>
+        According to Yandex Mobile Ads documentation, the SDK may collect a device identifier when the
+        user has granted the relevant permission. Location data is used by the SDK only if location
+        options are enabled and the user has granted location permission. Time & Money does not intentionally
+        send your in-app financial records, transactions, receipts, tasks, habits, or backup files to Yandex
+        Mobile Ads.
+      </p>
 
-  <ul>
-    <li><strong>Camera:</strong> used to scan or attach receipt images and, where available, add optional photos.</li>
-    <li><strong>Photo Library:</strong> used to select images or receipts that you choose to attach.</li>
-    <li><strong>Location:</strong> used only if you choose to attach a location to a transaction.</li>
-    <li><strong>Face ID:</strong> used only if you enable app lock or security features.</li>
-    <li><strong>Tracking permission:</strong> used to ask whether advertising identifiers may be used for advertising purposes.</li>
-  </ul>
+      <h2>Support emails</h2>
+      <p>
+        If you contact support by email, your email address, message content, and any information you choose
+        to include may be used to respond to your request. Do not send sensitive financial data, backup files,
+        or personal documents unless you understand the risks.
+      </p>
 
-  <h2>Advertising</h2>
+      <h2>Purchases and subscriptions</h2>
+      <p>
+        Purchases and subscriptions, if offered, are processed by Apple through the App Store. The developer
+        does not receive your full payment card details.
+      </p>
 
-  <p>
-    Time & Money uses Yandex Mobile Ads to display advertisements in the app. Advertising partners
-    may process certain technical identifiers and advertising-related information to provide ads,
-    measure advertising performance, and help prevent fraud or abuse.
-  </p>
+      <h2>Data sharing</h2>
+      <p>
+        Time & Money does not sell your personal data. The app does not share your in-app personal data with
+        the developer’s server because no such server is used for storing app data. Advertising-related data
+        may be processed by Yandex Mobile Ads as described in this policy and in Yandex’s own privacy
+        documentation.
+      </p>
 
-  <p>
-    On iOS, the app may ask for permission to track activity across apps and websites owned by other
-    companies using Apple’s AppTrackingTransparency framework. If you allow tracking, an advertising
-    identifier such as the device advertising ID may be used to help show more relevant ads. If you
-    choose not to allow tracking, the app will still work and may still show ads, but those ads may be
-    less personalized.
-  </p>
+      <h2>Analytics and tracking</h2>
+      <p>
+        Time & Money does not currently use a separate third-party analytics or crash reporting service.
+        The app uses Yandex Mobile Ads for advertising and may request tracking permission through Apple’s
+        AppTrackingTransparency framework for advertising purposes.
+      </p>
 
-  <p>
-    According to Yandex Mobile Ads documentation, the SDK may collect a device identifier when the
-    user has granted the relevant permission. Location data is used by the SDK only if location
-    options are enabled and the user has granted location permission. Time & Money does not intentionally
-    send your in-app financial records, transactions, receipts, tasks, habits, or backup files to Yandex
-    Mobile Ads.
-  </p>
+      <h2>Children</h2>
+      <p>
+        Time & Money is not intended for children under 13. The app is designed for personal productivity
+        and personal finance management.
+      </p>
 
-  <h2>Support emails</h2>
+      <h2>Changes to this policy</h2>
+      <p>
+        This Privacy Policy may be updated from time to time. The latest version will be available on this page.
+      </p>
 
-  <p>
-    If you contact support by email, your email address, message content, and any information you choose
-    to include may be used to respond to your request. Do not send sensitive financial data, backup files,
-    or personal documents unless you understand the risks.
-  </p>
+      <h2>Contact</h2>
+      <p>
+        If you have questions about this Privacy Policy, contact:
+        <a href="mailto:timemoneyapp@yahoo.com">timemoneyapp@yahoo.com</a>
+      </p>
 
-  <h2>Purchases and subscriptions</h2>
+      <div class="divider"></div>
+    </main>
 
-  <p>
-    Purchases and subscriptions, if offered, are processed by Apple through the App Store. The developer
-    does not receive your full payment card details.
-  </p>
-
-  <h2>Data sharing</h2>
-
-  <p>
-    Time & Money does not sell your personal data. The app does not share your in-app personal data with
-    the developer’s server because no such server is used for storing app data. Advertising-related data
-    may be processed by Yandex Mobile Ads as described in this policy and in Yandex’s own privacy
-    documentation.
-  </p>
-
-  <h2>Analytics and tracking</h2>
-
-  <p>
-    Time & Money does not currently use a separate third-party analytics or crash reporting service.
-    The app uses Yandex Mobile Ads for advertising and may request tracking permission through Apple’s
-    AppTrackingTransparency framework for advertising purposes.
-  </p>
-
-  <h2>Children</h2>
-
-  <p>
-    Time & Money is not intended for children under 13. The app is designed for personal productivity
-    and personal finance management.
-  </p>
-
-  <h2>Changes to this policy</h2>
-
-  <p>
-    This Privacy Policy may be updated from time to time. The latest version will be available on this page.
-  </p>
-
-  <h2>Contact</h2>
-
-  <p>
-    If you have questions about this Privacy Policy, contact: timemoneyapp@yahoo.com
-  </p>
-
-  <p>© 2026 Sultangaraev Apps. All rights reserved.</p>
+    <footer>
+      © 2026 Sultangaraev Apps. All rights reserved.
+      · <a href="privacy.html">Privacy Policy</a>
+      · <a href="terms.html">Terms of Use</a>
+    </footer>
+  </div>
 </body>
 </html>
